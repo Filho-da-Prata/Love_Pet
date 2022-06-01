@@ -16,9 +16,9 @@ def redimensionar(img,x,y):
     rimg = img.resize((x,y),Image.ANTIALIAS)
     new_img = ImageTk.PhotoImage(rimg)
     return new_img
-
 img = (Image.open('sair.png'))
 img = redimensionar(img, 25, 25)
+
 # -----------------------H1----------------------- #
 nome_empresa = Label(index)
 nome_empresa.configure(
@@ -29,7 +29,6 @@ nome_empresa.configure(
 )
 nome_empresa.place(x=390, y=30)
 
-
 sair_botao = Button(index)
 sair_botao.configure(
     image= img,
@@ -38,7 +37,6 @@ sair_botao.configure(
     height= 40,
     relief = RAISED,
     command= sairProg
-    
 )
 sair_botao.place(x=978, y=20)
 
