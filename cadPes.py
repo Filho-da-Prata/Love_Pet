@@ -3,31 +3,37 @@ from tkinter import *
 window = Tk()
 window.title("Love Pet")
 window.geometry("1024x600")
-window.configure(bg = "#086788")
-window.resizable(False,False)
+window.configure(bg="#086788")
+window.resizable(False, False)
 
 # -----------------------Class Entry----------------------- #
+
+
 class entrada:
     def __init__(self, container):
-         self.et = Entry (container)
-         self.et.configure(
-            bg = '#C4C4C4',
-            fg = 'black',
-            width = 30,
-            font = ('Verdana', 15)
-         )
+        self.et = Entry(container)
+        self.et.configure(
+            bg='#C4C4C4',
+            fg='black',
+            width=30,
+            font=('Verdana', 15)
+        )
 
 # -----------------------Class Label----------------------- #
+
+
 class textos:
     def __init__(self, container):
-         self.lb = Label (container)
-         self.lb.configure(
-            bg = '#086788',
-            fg = '#FFFFFF',
-            font = ('Verdana', 20,'bold')
-         )
+        self.lb = Label(container)
+        self.lb.configure(
+            bg='#086788',
+            fg='#FFFFFF',
+            font=('Verdana', 20, 'bold')
+        )
 
 # -----------------------Class Canvas----------------------- #
+
+
 class Mypage(Frame):
     def __init__(self, master):
         super().__init__(master)
@@ -39,39 +45,41 @@ class Mypage(Frame):
         self.canvas = Canvas(self)
         self.canvas.grid(row=0, column=0, sticky="news")
 
-        self.scroll_bar = Scrollbar(self, orient=VERTICAL, command = self.canvas.yview)
+        self.scroll_bar = Scrollbar(
+            self, orient=VERTICAL, command=self.canvas.yview)
         self.scroll_bar.grid(row=0, column=1, sticky='ns')
-        self.canvas.config(yscrollcommand = self.scroll_bar.set)
-        
+        self.canvas.config(yscrollcommand=self.scroll_bar.set)
+
         self.internal_frame = Frame(self.canvas)
-        self.canvas.create_window((0, 0), window=self.internal_frame, anchor='nw')
+        self.canvas.create_window(
+            (0, 0), window=self.internal_frame, anchor='nw')
 
         self.__build()
         self.internal_frame.update_idletasks()
 
-        self.config(width=2048,height=1200)
+        self.config(width=2048, height=1200)
         self.canvas.config(scrollregion=self.canvas.bbox("all"))
 
     def __build(self):
-    #---- criando a Janela ----#
+        #---- criando a Janela ----#
         janela = Frame(self.internal_frame)
         janela.configure(
-            bg= "#086788",
-            width= 2048,
+            bg="#086788",
+            width=2048,
             height=1200,
-            highlightbackground= "#086788",
-            highlightthickness= '0px'
+            highlightbackground="#086788",
+            highlightthickness='0px'
         )
-        janela.pack(anchor= 'center')
-    
+        janela.pack(anchor='center')
+
     #---- titulo tela ----#
 
         nome_empresa = Label(janela)
         nome_empresa.configure(
-            text = "CADASTRO",
-            bg = '#086788',
-            fg = '#FFFFFF',
-            font = ('Verdana', 40,'bold')
+            text="CADASTRO",
+            bg='#086788',
+            fg='#FFFFFF',
+            font=('Verdana', 40, 'bold')
         )
         nome_empresa.place(x=338, y=1)
 
@@ -118,10 +126,6 @@ class Mypage(Frame):
 
         senConf_ent = entrada(janela)
         senConf_ent.et.place(x=370, y=332)
-
-
-
-
 
 
 cadastro = Mypage(window)
