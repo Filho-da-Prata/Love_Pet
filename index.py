@@ -99,6 +99,4 @@ cadCli_but = botoes(index)
 cadCli_but.bt.configure(text='Cadastrar Clínicas', command= Open_cadCli)
 cadCli_but.bt.place(x=538, y=360)
 
-
-
 index.mainloop()
