@@ -19,7 +19,7 @@ def redimensionar(img,x,y):
 img = (Image.open('sair.png'))
 img = redimensionar(img, 25, 25)
 
-# -----------------------Class Entry----------------------- #
+# -----------------------Class Button----------------------- #
 class botoes:
     def __init__(self, container):
          self.bt = Button (container)
