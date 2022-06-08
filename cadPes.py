@@ -22,7 +22,6 @@ class entrada:
 
 # -----------------------Class Label----------------------- #
 
-
 class textos:
     def __init__(self, container):
         self.lb = Label(container)
@@ -33,7 +32,6 @@ class textos:
         )
 
 # -----------------------Class Canvas----------------------- #
-
 
 class Mypage(Frame):
     def __init__(self, master):

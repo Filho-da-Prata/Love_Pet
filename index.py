@@ -9,12 +9,10 @@ index.resizable(False, False)
 
 # --------------------Função sair-------------------- #
 
-
 def sairProg():
     index.destroy()
 
 # --------------------Função redimensionar img-------------------- #
-
 
 def redimensionar(img, x, y):
     rimg = img.resize((x, y), Image.ANTIALIAS)
